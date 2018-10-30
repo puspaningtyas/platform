@@ -16,6 +16,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PUT;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import pojos.Pasien;
 
 /**
@@ -41,13 +42,16 @@ public class PasienResource {
      */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public String getJson() {
+    public Response getJson() {
         //TODO return proper representation object
         PasienHelper test = new PasienHelper();
         List<Pasien> list = test.getAllPasien();
         Gson gson = new Gson();
         String json = gson.toJson(list);
-        return json;
+        return Response
+                .status(200)
+                .entity(json)
+                .build();
     }
 
     /**
