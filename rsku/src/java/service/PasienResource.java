@@ -58,8 +58,8 @@ public class PasienResource {
      * PUT method for updating or creating an instance of PasienResource
      * @param content representation for the resource
      */
-    @PUT
-    @Consumes(MediaType.APPLICATION_JSON)
-    public void putJson(String content) {
-    }
+//    @PUT
+//    @Consumes(MediaType.APPLICATION_JSON)
+//    public void putJson(String content) {
+//    }
 }
