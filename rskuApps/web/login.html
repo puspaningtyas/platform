@@ -16,13 +16,20 @@ and open the template in the editor.
 
             <label for="uname"><b>Username</b></label>
             <input type="text" placeholder="Enter Username" id="uname" required>
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" id="password" required>
+            
             
             <button type="submit" onclick="login()">Login</button>
         </div>
         <script>
             function login() {
+                // logika program cek login
+                // if fungsi web service cek(username,password) == true{
                 var myWindow = window.open("index.html", "_self");
+                // set cookie
                 setCookie("username",uname.value,1);
+                //}
             }
             function setCookie(cname, cvalue, exdays) {
                 var d = new Date();
