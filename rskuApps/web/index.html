@@ -13,6 +13,7 @@ and open the template in the editor.
     <body >
         <div>TODO write content</div>
         <button id="username" onclick="checkCookie()">Get_UserName</button>
+        <p id="demo"></p>
         <script>
             function getCookie(cname) {
                 var name = cname + "=";
@@ -32,7 +33,8 @@ and open the template in the editor.
             function checkCookie() {
                 var username = getCookie("username");
                 if (username != "") {
-                    alert("Welcome again " + username);
+//                    alert("Welcome again " + username);
+                      document.getElementById("demo").innerHTML= username;
                 } 
 //                else {
 //                    username = prompt("Please enter your name:", "");
